@@ -1,0 +1,119 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #1c1c24;
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.stopwatch {
+    width: 350px;
+    background-color: #2d3e50;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    color: #ecf0f1;
+    transition: box-shadow 0.3s ease;
+}
+
+.stopwatch:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+}
+
+.display {
+    margin-bottom: 30px;
+}
+
+#display {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 20px;
+    color: #f39c12;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #3498db;
+    color: white;
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#pauseBtn {
+    background-color: #e74c3c;
+}
+
+#pauseBtn:hover {
+    background-color: #c0392b;
+}
+
+#resetBtn {
+    background-color: #e67e22;
+}
+
+#resetBtn:hover {
+    background-color: #d35400;
+}
+
+#lapBtn {
+    background-color: #9b59b6;
+}
+
+#lapBtn:hover {
+    background-color: #8e44ad;
+}
+
+/* Lap list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    background-color: rgba(44, 62, 80, 0.8);
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 10px;
+    color: #f39c12;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+ul li.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
